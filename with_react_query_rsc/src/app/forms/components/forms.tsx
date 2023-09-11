@@ -3,6 +3,7 @@
 import {useQuery} from "@tanstack/react-query";
 import {fetchForms} from "@/lib/fetches";
 import Link from "next/link";
+import {useEffect, useState} from "react";
 
 export default function Forms({forms}) {
 
@@ -12,6 +13,12 @@ export default function Forms({forms}) {
     initialData: forms,
     staleTime: 1000
   })
+
+  const [randomNumber, setRandomNumber] = useState()
+
+  useEffect(() => {
+    setRandomNumber(Math.random())
+  }, []);
 
   const {data, isLoading, error} = useForms
 
@@ -25,7 +32,7 @@ export default function Forms({forms}) {
 
   return (
     <div style={{backgroundColor: '#eee'}}>
-      <p>Client Component: {Math.random()}</p>
+      <p>Client Component: {randomNumber}</p>
       <ul>
         {data.map((form) => (
           <li key={form.id}>
