@@ -3,13 +3,13 @@
 import {useQuery} from "@tanstack/react-query";
 import {fetchForms} from "@/lib/fetches";
 import Link from "next/link";
-import RandomNumber from "@/components/_shared/RandomNumber";
 
-export default function FormList() {
+export default function FormList({forms}) {
 
   const {data, isLoading, error} = useQuery({
     queryKey: ['forms', 'myForms'],
     queryFn: fetchForms,
+    initialData: forms,
     staleTime: 1000
   })
 
@@ -23,7 +23,6 @@ export default function FormList() {
 
   return (
     <div>
-      <RandomNumber/>
       <ul>
         {data.map((form) => (
           <li key={form.id}>
