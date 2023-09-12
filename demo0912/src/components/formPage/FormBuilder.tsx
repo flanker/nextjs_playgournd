@@ -4,11 +4,12 @@ import {useQuery} from "@tanstack/react-query";
 import {fetchForm} from "@/lib/fetches";
 import RandomNumber from "@/components/_shared/RandomNumber";
 
-export default function FormBuilder({formId}) {
+export default function FormBuilder({formId, form}) {
 
   const {data, isLoading, error} = useQuery({
     queryKey: ['forms', formId],
     queryFn: () => fetchForm(formId),
+    initialData: form,
     staleTime: 1000
   })
 
@@ -22,7 +23,6 @@ export default function FormBuilder({formId}) {
 
   return (
     <div>
-      <RandomNumber/>
       <p>ID: {data.id}</p>
       <p>Name: {data.name}</p>
     </div>
