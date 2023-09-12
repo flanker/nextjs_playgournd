@@ -1,6 +1,6 @@
 import FormPageNavigator from "@/components/formPage/FormPageNavigator";
 
-export default async function Layout({children, params}) {
+export default function Layout({children, params}) {
   const {id} = params
 
   return (

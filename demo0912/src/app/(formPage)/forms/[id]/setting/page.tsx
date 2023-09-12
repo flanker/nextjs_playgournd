@@ -1,6 +1,6 @@
 import FormSettings from "@/components/formPage/FormSettings";
 
-export default async function FormEntriesPage() {
+export default function FormEntriesPage() {
   return (
     <div>
       <FormSettings />

@@ -2,7 +2,6 @@ import './globals.css'
 import type {Metadata} from 'next'
 import {Inter} from 'next/font/google'
 import QueryProvider from "@/app/queryProvider";
-import WithCurrentUser from "@/loaders/currentUser/withCurrentUser";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -16,9 +15,7 @@ export default function RootLayout({children}) {
     <html lang="en">
     <body className={inter.className}>
     <QueryProvider>
-      <WithCurrentUser>
-        {children}
-      </WithCurrentUser>
+      {children}
     </QueryProvider>
     </body>
     </html>

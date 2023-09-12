@@ -1,6 +1,6 @@
 import FormEntries from "@/components/formPage/FormEntries";
 
-export default async function FormEntriesPage() {
+export default function FormEntriesPage() {
   return (
     <div>
       <FormEntries />
