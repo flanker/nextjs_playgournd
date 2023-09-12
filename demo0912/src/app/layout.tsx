@@ -16,8 +16,9 @@ export default function RootLayout({children}) {
     <html lang="en">
     <body className={inter.className}>
     <QueryProvider>
-      <WithCurrentUser/>
-      {children}
+      <WithCurrentUser>
+        {children}
+      </WithCurrentUser>
     </QueryProvider>
     </body>
     </html>

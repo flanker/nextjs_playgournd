@@ -11,6 +11,7 @@ export default function PlanInfo() {
     staleTime: 5000
   })
 
+  console.log("-----------------")
   console.log("UserInfo")
   console.log("status", status)
   console.log("loading", isLoading)
