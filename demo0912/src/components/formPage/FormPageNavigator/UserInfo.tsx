@@ -11,6 +11,7 @@ export default function UserInfo() {
     staleTime: 5000
   })
 
+  console.log("-------------------------")
   console.log("UserInfo")
   console.log("status", status)
   console.log("loading", isLoading)
@@ -26,7 +27,7 @@ export default function UserInfo() {
 
   return (
     <div>
-      <p>{data.name}</p>
+      <div>{data.name}</div>
     </div>
   )
 }

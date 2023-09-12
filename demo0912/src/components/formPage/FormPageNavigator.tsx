@@ -7,10 +7,10 @@ export default function FormPageNavigator() {
     <div>
       <RandomNumber/>
       <h2>Form Page Navigator</h2>
-      <p>
+      <div>
         <Link href={'/home'}>Back to home page</Link>
         <UserInfo/>
-      </p>
+      </div>
     </div>
   )
 }

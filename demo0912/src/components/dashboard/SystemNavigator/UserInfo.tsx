@@ -27,7 +27,7 @@ export default function UserInfo() {
 
   return (
     <div>
-      <p>{data.name}</p>
+      <div>{data.name}</div>
     </div>
   )
 }

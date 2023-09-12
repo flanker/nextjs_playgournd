@@ -12,7 +12,7 @@ export default function PlanInfo() {
   })
 
   console.log("-----------------")
-  console.log("UserInfo")
+  console.log("PlanInfo")
   console.log("status", status)
   console.log("loading", isLoading)
   console.log("data", data)
@@ -27,7 +27,7 @@ export default function PlanInfo() {
 
   return (
     <div>
-      <p>{data.current_plan}</p>
+      <div>{data.current_plan}</div>
     </div>
   )
 }
