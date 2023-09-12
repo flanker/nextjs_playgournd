@@ -20,5 +20,6 @@ function fetchForm(id: string) {
     id: id,
     token: `token-${id}`,
     name: `Form ${id}`,
+    description: `Description for form ${id}`
   }
 }

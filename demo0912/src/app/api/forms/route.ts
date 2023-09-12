@@ -16,10 +16,12 @@ function sleep() {
 
 function fetchForms() {
   return Array.from({length: 20}, (_, index) => {
+    const id = index + 1
     return {
-      id: index + 1,
-      token: `token-${index + 1}`,
-      name: `Form ${index + 1}`,
+      id: id,
+      token: `token-${id}`,
+      name: `Form ${id}`,
+      description: `Description for form ${id}`
     }
   })
 }
