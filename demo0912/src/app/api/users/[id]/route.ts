@@ -18,7 +18,7 @@ function sleep() {
 function fetchUser(id: string) {
   return {
     id: id,
-    name: `User ${id}`,
-    current_plan: 'Pro'
+    name: `张无忌`,
+    current_plan: '专业版'
   }
 }

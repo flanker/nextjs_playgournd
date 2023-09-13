@@ -8,7 +8,7 @@ import {useQuery} from "@tanstack/react-query";
 
 export default function FormPageNavigator({formId}) {
 
-  const { data, isLoading } = useQuery({
+  const {data, isLoading} = useQuery({
     queryKey: ['forms', formId],
     queryFn: () => fetchForm(formId),
     staleTime: 5000

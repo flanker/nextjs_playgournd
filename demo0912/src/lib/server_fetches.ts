@@ -10,3 +10,14 @@ export function fetchForms() {
 export function fetchForm(id: string) {
   return fetchForms().find(form => form.id.toString() === id)
 }
+
+export function saveForm(id: string, form) {
+  const allForms = fetchForms().map(f => {
+    if (f.id.toString() === id.toString()) {
+      return form
+    }
+    return f
+  })
+  fs.writeFileSync(path.join(process.cwd(), 'db', 'forms.json'), JSON.stringify(allForms))
+  return form
+}

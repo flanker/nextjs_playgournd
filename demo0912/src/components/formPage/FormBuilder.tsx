@@ -2,7 +2,7 @@
 
 import {useQuery} from "@tanstack/react-query";
 import {fetchForm} from "@/lib/client_fetches";
-import RandomNumber from "@/components/_shared/RandomNumber";
+import {FormBuilderPanel} from "@/components/formPage/FormBuilder/FormBuilderPanel";
 
 export default function FormBuilder({formId}) {
 
@@ -18,9 +18,7 @@ export default function FormBuilder({formId}) {
 
   return (
     <div>
-      <p>ID: {data.id}</p>
-      <p>Name: {data.name}</p>
-      <p>Description: {data.description}</p>
+      <FormBuilderPanel formData={data}/>
     </div>
   )
 }
