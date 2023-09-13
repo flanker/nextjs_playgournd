@@ -1,7 +1,7 @@
 'use client'
 
 import {useQuery} from "@tanstack/react-query";
-import {fetchForms} from "@/lib/fetches";
+import {fetchForms} from "@/lib/client_fetches";
 import Link from "next/link";
 
 export default function FormList({forms}) {

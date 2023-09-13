@@ -1,6 +1,6 @@
 import FormList from "@/components/dashboard/FormList";
 import RandomNumber from "@/components/_shared/RandomNumber";
-import {fetchForms} from "@/lib/fetches";
+import {fetchForms} from "@/lib/client_fetches";
 
 export default async function HomePage() {
 

@@ -3,7 +3,7 @@
 import RandomNumber from "@/components/_shared/RandomNumber";
 import Link from "next/link";
 import UserInfo from "@/components/formPage/FormPageNavigator/UserInfo";
-import {fetchForm} from "@/lib/fetches";
+import {fetchForm} from "@/lib/client_fetches";
 import {useQuery} from "@tanstack/react-query";
 
 export default function FormPageNavigator({formId}) {

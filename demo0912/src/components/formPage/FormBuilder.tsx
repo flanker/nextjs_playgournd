@@ -1,7 +1,7 @@
 'use client'
 
 import {useQuery} from "@tanstack/react-query";
-import {fetchForm} from "@/lib/fetches";
+import {fetchForm} from "@/lib/client_fetches";
 import RandomNumber from "@/components/_shared/RandomNumber";
 
 export default function FormBuilder({formId}) {

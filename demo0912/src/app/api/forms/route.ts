@@ -1,4 +1,5 @@
 import {NextResponse} from "next/server";
+import {fetchForms} from "@/lib/server_fetches";
 
 export async function GET() {
   await sleep()
@@ -10,18 +11,6 @@ function sleep() {
   return new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve()
-    }, 1000)
-  })
-}
-
-function fetchForms() {
-  return Array.from({length: 20}, (_, index) => {
-    const id = index + 1
-    return {
-      id: id,
-      token: `token-${id}`,
-      name: `Form ${id}`,
-      description: `Description for form ${id}`
-    }
+    }, 500)
   })
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import {useQuery} from "@tanstack/react-query";
-import {fetchCurrentUser} from "@/lib/fetches";
+import {fetchCurrentUser} from "@/lib/client_fetches";
 
 export default function PlanInfo() {
 
